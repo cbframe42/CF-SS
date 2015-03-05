@@ -14,3 +14,12 @@ C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSe
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.exe
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.xml
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.pdb
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.vbprojResolveAssemblyReference.cache
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.Login.resources
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.Resources.resources
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.vbproj.GenerateResource.Cache
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSelections.exe
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSelections.pdb
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSelections.xml
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\EntityFramework.dll
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\EntityFramework.xml

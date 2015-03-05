@@ -6,35 +6,20 @@ SacredSelections
 </name>
 </assembly>
 <members>
-<member name="M:SacredSelections.HashSaltFactory.CreateHash(System.String,System.String)">
+<member name="M:SacredSelections.Validator.Name(System.String,System.Boolean)">
 	<summary>
-	</summary>
-	<param name="valueToHash">Hashed Value</param>
-	<param name="salt">Salt</param>
-	<returns>Hashed value with added salt.</returns>
-	<remarks>Must have salt before using.</remarks>
-</member><member name="M:SacredSelections.HashSaltFactory.CreateSalt">
-	<summary>
- Method generates and returns a random salt value. Salt value is added to a string before hashing to increase security.
+ Returns a string with the errors
  </summary>
-	<returns>Salt value</returns>
+	<param name="n"></param>
+	<param name="isMiddlename"></param>
+	<returns></returns>
 	<remarks></remarks>
-</member><member name="T:SacredSelections.HashSaltFactory">
+</member><member name="M:SacredSelections.Validator.SSN(System.String)">
 	<summary>
- Creates a hash from a string input.
+ Returns true for errors
  </summary>
-	<remarks>This class is a one-way encryption method. The value it returns cannot be decrypted, because a random salt value is added to increase security.</remarks>
-</member><member name="M:SacredSelections.Crypt.#ctor(System.String)">
-	<summary>
- If not initialized with specific key string then a default key will be used.
- </summary>
-	<param name="key">Key</param>
-	<remarks>
-	</remarks>
-</member><member name="T:SacredSelections.Crypt">
-	<summary>
- Tools for encryption and decryption of strings.
- </summary>
+	<param name="s"></param>
+	<returns></returns>
 	<remarks></remarks>
 </member><member name="P:SacredSelections.My.Resources.Resources.ResourceManager">
 	<summary>
@@ -61,6 +46,36 @@ SacredSelections
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:SacredSelections.Crypt.#ctor(System.String)">
+	<summary>
+ If not initialized with specific key string then a default key will be used.
+ </summary>
+	<param name="key">Key</param>
+	<remarks>
+	</remarks>
+</member><member name="T:SacredSelections.Crypt">
+	<summary>
+ Tools for encryption and decryption of strings.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SacredSelections.HashSaltFactory.CreateHash(System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="valueToHash">Hashed Value</param>
+	<param name="salt">Salt</param>
+	<returns>Hashed value with added salt.</returns>
+	<remarks>Must have salt before using.</remarks>
+</member><member name="M:SacredSelections.HashSaltFactory.CreateSalt">
+	<summary>
+ Method generates and returns a random salt value. Salt value is added to a string before hashing to increase security.
+ </summary>
+	<returns>Salt value</returns>
+	<remarks></remarks>
+</member><member name="T:SacredSelections.HashSaltFactory">
+	<summary>
+ Creates a hash from a string input.
+ </summary>
+	<remarks>This class is a one-way encryption method. The value it returns cannot be decrypted, because a random salt value is added to increase security.</remarks>
 </member>
 </members>
 </doc>

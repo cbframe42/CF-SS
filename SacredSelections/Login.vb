@@ -8,7 +8,6 @@ Public Class Login
     'Public Shared _carriersList As List(Of CellCarrier)
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
-        'Test
         _empRepo = New EmployeeRepo()
         EmployeeLoggedIn = New Employee()
         EmployeeLoggedIn = _empRepo.FindOneByUsername(txtUsername.Text.Trim().ToLower)
@@ -64,6 +63,7 @@ Public Class Login
             Else
                 lblNotification.Text = "Incorrect password."
                 lblNotification.Visible = True
+                lblYouMust.Visible = False
                 txtPassword.Focus()
                 txtPassword.SelectAll()
             End If
