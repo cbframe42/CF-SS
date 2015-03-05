@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SSDBModelStoreContainer" CdmEntityContainer="SSDBEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="SSDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="NameFirst" ColumnName="NameFirst" />
+          <ScalarProperty Name="NameLast" ColumnName="NameLast" />
+          <ScalarProperty Name="NameMiddle" ColumnName="NameMiddle" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="AddressHome" ColumnName="AddressHome" />
+          <ScalarProperty Name="CityHome" ColumnName="CityHome" />
+          <ScalarProperty Name="StateHome" ColumnName="StateHome" />
+          <ScalarProperty Name="ZipHome" ColumnName="ZipHome" />
+          <ScalarProperty Name="PhoneHome" ColumnName="PhoneHome" />
+          <ScalarProperty Name="PhoneCell" ColumnName="PhoneCell" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="DL" ColumnName="DL" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+          <ScalarProperty Name="AccountLocked" ColumnName="AccountLocked" />
+          <ScalarProperty Name="ForcePasswordChange" ColumnName="ForcePasswordChange" />
+          <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+          <ScalarProperty Name="EmergencyContactPhone1" ColumnName="EmergencyContactPhone1" />
+          <ScalarProperty Name="EmergencyContactPhone2" ColumnName="EmergencyContactPhone2" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeStats">
+      <EntityTypeMapping TypeName="SSDBModel.EmployeeStat">
+        <MappingFragment StoreEntitySet="EmployeeStat">
+          <ScalarProperty Name="LoggedIn" ColumnName="LoggedIn" />
+          <ScalarProperty Name="LogOutTime" ColumnName="LogOutTime" />
+          <ScalarProperty Name="LogInTime" ColumnName="LogInTime" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

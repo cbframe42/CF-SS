@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SSDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SSDBModelStoreContainer">
+          <EntitySet Name="Employee" EntityType="SSDBModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeStat" EntityType="SSDBModel.Store.EmployeeStat" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NameFirst" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NameLast" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NameMiddle" Type="varchar" MaxLength="50" />
+          <Property Name="SSN" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="AddressHome" Type="varchar" MaxLength="100" />
+          <Property Name="CityHome" Type="varchar" MaxLength="100" />
+          <Property Name="StateHome" Type="varchar" MaxLength="20" />
+          <Property Name="ZipHome" Type="varchar" MaxLength="5" />
+          <Property Name="PhoneHome" Type="varchar" MaxLength="10" />
+          <Property Name="PhoneCell" Type="varchar" MaxLength="10" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="DL" Type="varchar" MaxLength="9" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="20" />
+          <Property Name="DateStarted" Type="date" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Salt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AccessLevel" Type="int" Nullable="false" />
+          <Property Name="AccountLocked" Type="bit" Nullable="false" />
+          <Property Name="ForcePasswordChange" Type="bit" Nullable="false" />
+          <Property Name="EmergencyContactName" Type="varchar" MaxLength="100" />
+          <Property Name="EmergencyContactPhone1" Type="varchar" MaxLength="20" />
+          <Property Name="EmergencyContactPhone2" Type="varchar" MaxLength="20" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeStat">
+          <Key>
+            <PropertyRef Name="LogInTime" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="LogInTime" Type="datetime" Nullable="false" />
+          <Property Name="LogOutTime" Type="datetime" />
+          <Property Name="LoggedIn" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'SSDB.dbo.Donor' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Donor">
+        <Property Name="BusinessName" Type="varchar" MaxLength="50" />
+      </EntityType>-->
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SSDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="SSDBModel.Employee" />
+          <EntitySet Name="EmployeeStats" EntityType="SSDBModel.EmployeeStat" />
+        </EntityContainer>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NameFirst" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NameLast" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NameMiddle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SSN" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="AddressHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CityHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateHome" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ZipHome" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneHome" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneCell" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DL" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Salt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AccessLevel" Type="Int32" Nullable="false" />
+          <Property Name="AccountLocked" Type="Boolean" Nullable="false" />
+          <Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" />
+          <Property Name="EmergencyContactName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="EmergencyContactPhone1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EmergencyContactPhone2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeStat">
+          <Key>
+            <PropertyRef Name="LogInTime" />
+          </Key>
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="LogInTime" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LogOutTime" Precision="3" />
+          <Property Type="Boolean" Name="LoggedIn" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SSDBModelStoreContainer" CdmEntityContainer="SSDBEntities">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="SSDBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="NameFirst" ColumnName="NameFirst" />
+                <ScalarProperty Name="NameLast" ColumnName="NameLast" />
+                <ScalarProperty Name="NameMiddle" ColumnName="NameMiddle" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="AddressHome" ColumnName="AddressHome" />
+                <ScalarProperty Name="CityHome" ColumnName="CityHome" />
+                <ScalarProperty Name="StateHome" ColumnName="StateHome" />
+                <ScalarProperty Name="ZipHome" ColumnName="ZipHome" />
+                <ScalarProperty Name="PhoneHome" ColumnName="PhoneHome" />
+                <ScalarProperty Name="PhoneCell" ColumnName="PhoneCell" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="DL" ColumnName="DL" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+                <ScalarProperty Name="AccountLocked" ColumnName="AccountLocked" />
+                <ScalarProperty Name="ForcePasswordChange" ColumnName="ForcePasswordChange" />
+                <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+                <ScalarProperty Name="EmergencyContactPhone1" ColumnName="EmergencyContactPhone1" />
+                <ScalarProperty Name="EmergencyContactPhone2" ColumnName="EmergencyContactPhone2" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeStats">
+            <EntityTypeMapping TypeName="SSDBModel.EmployeeStat">
+              <MappingFragment StoreEntitySet="EmployeeStat">
+                <ScalarProperty Name="LoggedIn" ColumnName="LoggedIn" />
+                <ScalarProperty Name="LogOutTime" ColumnName="LogOutTime" />
+                <ScalarProperty Name="LogInTime" ColumnName="LogInTime" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

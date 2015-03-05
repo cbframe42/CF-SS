@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SSDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SSDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="SSDBModel.Employee" />
+    <EntitySet Name="EmployeeStats" EntityType="SSDBModel.EmployeeStat" />
+  </EntityContainer>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NameFirst" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NameLast" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NameMiddle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SSN" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="AddressHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CityHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="StateHome" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ZipHome" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="PhoneHome" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="PhoneCell" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DL" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Salt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="AccessLevel" Type="Int32" Nullable="false" />
+    <Property Name="AccountLocked" Type="Boolean" Nullable="false" />
+    <Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" />
+    <Property Name="EmergencyContactName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EmergencyContactPhone1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="EmergencyContactPhone2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeStat">
+    <Key>
+      <PropertyRef Name="LogInTime" />
+    </Key>
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="DateTime" Name="Date" Nullable="false" Precision="0" />
+    <Property Type="DateTime" Name="LogInTime" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LogOutTime" Precision="3" />
+    <Property Type="Boolean" Name="LoggedIn" Nullable="false" />
+  </EntityType>
+</Schema>
