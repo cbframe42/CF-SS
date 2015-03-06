@@ -1,39 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SSDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="SSDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AppLogs" EntityType="SSDBModel.AppLog" />
     <EntitySet Name="Employees" EntityType="SSDBModel.Employee" />
     <EntitySet Name="EmployeeStats" EntityType="SSDBModel.EmployeeStat" />
   </EntityContainer>
+  <EntityType Name="AppLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Type="Int32" Name="LogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="EID" Nullable="false" />
+    <Property Type="String" Name="LogType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Message" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Employee">
     <Key>
       <PropertyRef Name="EID" />
     </Key>
-    <Property Name="EID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="NameFirst" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="NameLast" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="NameMiddle" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="SSN" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
-    <Property Name="AddressHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="CityHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="StateHome" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="ZipHome" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
-    <Property Name="PhoneHome" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="PhoneCell" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="DL" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
-    <Property Name="MaritalStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="Salt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="AccessLevel" Type="Int32" Nullable="false" />
-    <Property Name="AccountLocked" Type="Boolean" Nullable="false" />
-    <Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" />
-    <Property Name="EmergencyContactName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="EmergencyContactPhone1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="EmergencyContactPhone2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Type="Int32" Name="EID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NameFirst" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NameLast" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NameMiddle" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SSN" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddressHome" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CityHome" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="StateHome" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ZipHome" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneHome" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PhoneCell" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DOB" Nullable="false" Precision="0" />
+    <Property Type="String" Name="DL" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DateStarted" Nullable="false" Precision="0" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Salt" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AccessLevel" Nullable="false" />
+    <Property Type="Boolean" Name="AccountLocked" Nullable="false" />
+    <Property Type="Boolean" Name="ForcePasswordChange" Nullable="false" />
+    <Property Type="String" Name="EmergencyContactName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmergencyContactPhone1" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmergencyContactPhone2" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
   </EntityType>
   <EntityType Name="EmployeeStat">
     <Key>

@@ -22,6 +22,7 @@ Partial Public Class SSDBEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
+    Public Property AppLogs() As DbSet(Of AppLog)
     Public Property Employees() As DbSet(Of Employee)
     Public Property EmployeeStats() As DbSet(Of EmployeeStat)
 

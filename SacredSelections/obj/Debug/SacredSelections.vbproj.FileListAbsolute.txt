@@ -23,3 +23,6 @@ C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSe
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\SacredSelections.xml
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\EntityFramework.dll
 C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\bin\Debug\EntityFramework.xml
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.frmMain.resources
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.frmNewDonor.resources
+C:\Users\Colton\Documents\GitHub\CF-SS\CF-SS\SacredSelections\obj\Debug\SacredSelections.frmNewEmployee.resources

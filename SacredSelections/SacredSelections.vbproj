@@ -78,8 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomRepositoryDBConns\EmployeeRepo.vb" />
-    <Compile Include="CustomRepositoryDBConns\EmployeeStatsRepo.vb" />
+    <Compile Include="AppLog.vb">
+      <DependentUpon>SSDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CustomRepositoryDBConns\EmployeeRepo.vb" />
+    <Compile Include="Classes\CustomRepositoryDBConns\EmployeeStatsRepo.vb" />
+    <Compile Include="Classes\CustomRepositoryDBConns\LogRepo.vb" />
     <Compile Include="Employee.vb">
       <DependentUpon>SSDB.tt</DependentUpon>
     </Compile>
@@ -90,6 +94,18 @@
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewDonor.Designer.vb">
+      <DependentUpon>frmNewDonor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewDonor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewEmployee.Designer.vb">
+      <DependentUpon>frmNewEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -114,10 +130,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PartialClasses\EmployeePartial.vb" />
-    <Compile Include="PartialClasses\EmployeeStatsPartial.vb" />
-    <Compile Include="Security\Crypt.vb" />
-    <Compile Include="Security\HashSaltFactory.vb" />
+    <Compile Include="Classes\PartialClasses\EmployeePartial.vb" />
+    <Compile Include="Classes\PartialClasses\EmployeeStatsPartial.vb" />
+    <Compile Include="Classes\Security\Crypt.vb" />
+    <Compile Include="Classes\Security\HashSaltFactory.vb" />
     <Compile Include="SSDB.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,9 +149,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SSDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Validation\Validator.vb" />
+    <Compile Include="Classes\Validation\Validator.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewDonor.resx">
+      <DependentUpon>frmNewDonor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewEmployee.resx">
+      <DependentUpon>frmNewEmployee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>

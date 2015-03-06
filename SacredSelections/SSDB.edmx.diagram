@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fac85c1bb0224934a41f6d8b2b84726c" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="SSDBModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SSDBModel.EmployeeStat" Width="1.5" PointX="2.625" PointY="1" />
+      <Diagram DiagramId="fac85c1bb0224934a41f6d8b2b84726c" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="SSDBModel.AppLog" Width="1.5" PointX="0.5" PointY="0.625" />
+        <EntityTypeShape EntityType="SSDBModel.Employee" Width="1.5" PointX="2.25" PointY="0.875" />
+        <EntityTypeShape EntityType="SSDBModel.EmployeeStat" Width="1.5" PointX="4.25" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
